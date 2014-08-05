@@ -1,4 +1,4 @@
-StudentLife Rijeka Phonegap Application
+StudentLife Rijeka 
 =============================
 
 Mobile Application for Android Devices.
