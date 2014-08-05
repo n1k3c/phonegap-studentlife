@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudentLife Rijeka</title>
+	
+      
+      <!-- JQUERY -->
+    <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.3.1.min.css" />
+    <script src="jquery.mobile/jquery-1.9.1.min.js"></script>
+    <script src="jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+
+	<link rel="stylesheet" href="docsdemos-style-override.css" />
+	
+	
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    
+	<!-- System scripts -->
+	<!-- Uncomment following line to access PhoneGap APIs (not necessary to use PhoneGap to package web app) -->
+	  <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+	  <script type="text/javascript" charset="utf-8">
+      
+  		 var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+            navigator.splashscreen.hide();
+            
+        };
+
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        
+            
+        }   
+  
+        </script>  
+        <!-- Custom scripts/style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+	
+</head> 
+<body onload="init();" id="stage" class="theme"> 
+
+<div data-role="page" id="predavanja">
+
+  <!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Predavanja</h1>
+  	<a href="izbor.html" rel="external" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+</div><!--/header-->   
+
+
+<div data-role="content">
+            
+   <ul data-role="listview">
+        <li><a href="#ponedjeljak.html" data-transition="none">Ponedjeljak</a></li>
+        <li><a href="#utorak.html"  rel="external" data-transition="none">Utorak</a></li>
+        <li><a href="#srijeda.html"  rel="external" data-transition="none">Srijeda</a></li>
+        <li><a href="#cetvrtak.html"  rel="external" data-transition="none">Četvrtak</a></li>
+        <li><a href="#petak.html"  rel="external" data-transition="none">Petak</a></li>
+        <li><a href="#subota.html"  rel="external" data-transition="none">Subota</a></li>  
+   </ul><!--/listview-->  
+           
+            
+</div><!--/content-->
+
+</div><!--/page-->
+
+
+
+<!------------------------------ DANI U TJEDNU ------------------->
+
+<!--------- PONEDJELJAK    ---- PAGE 1 -------------------------------------------------------------------->
+<div data-role="page" id="ponedjeljak.html" >
+
+<!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Ponedjeljak</h1>
+  	<a href="#predavanja" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+    
+</div><!--/header-->
+
+
+<div data-role="content">
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 1</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 2</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 3</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 4</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 5</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 6</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 7</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+
+</div><!--/content-->
+
+</div><!--/ponedjeljak-->
+
+
+
+
+
+<!--------- UTORAK   ---- PAGE 2 ---------------------------------------------------------------------------------------->
+<div data-role="page" id="utorak.html" >
+
+<!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Utorak</h1>
+  	<a href="#predavanja" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+    
+</div><!--/header-->
+
+
+<div data-role="content">
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 1</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 2</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 3</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 4</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 5</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 6</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 7</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+
+</div><!--/content-->
+
+</div><!--/utorak-->
+
+
+
+
+
+<!--------- SRIJEDA  ---- PAGE 3 ---------------------------------------------------------------------------------------->
+<div data-role="page" id="srijeda.html" >
+
+<!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Srijeda</h1>
+  	<a href="#predavanja" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+    
+</div><!--/header-->
+
+
+<div data-role="content">
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 1</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 2</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 3</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 4</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 5</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 6</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 7</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+
+</div><!--/content-->
+
+</div><!--/srijeda-->
+
+
+<!--------- CETVRTAK  ---- PAGE 4 ---------------------------------------------------------------------------------------->
+<div data-role="page" id="cetvrtak.html" >
+
+<!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Četvrtak</h1>
+  	<a href="#predavanja" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+    
+</div><!--/header-->
+
+
+<div data-role="content">
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 1</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 2</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 3</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 4</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 5</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 6</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+<div data-role="collapsible-set" data-content-theme="d" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+    	
+        <h3>Predmet 7</h3>
+         <form name="predavanje" id="" method="post" action="">
+    			<label>Ime predmeta:</label>
+    			<input type="text" name="name" id="name" class="stored" value="" placeholder="Matematika 1" />
+
+    			<label>Tip:</label>
+    			<input type="text" name="type" id="type" class="stored" value="" placeholder="Vježbe ili predavanje" />
+
+    			<label>Vrijeme:</label>
+    			<input type="text" name="time" id="time" class="stored" value="" placeholder="12:30 - 14:00" />
+    			
+    			<label>(M)učionica:</label>
+    			<input type="text" name="class" id="class" class="stored" value="" placeholder="Predivna prostorija" />
+
+    			<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>
+		   </form>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    function init() {
+        if (localStorage["name"]) {
+            $('#name').val(localStorage["name"]);
+        }
+        if (localStorage["type"]) {
+            $('#type').val(localStorage["type"]);
+        }
+        if (localStorage["time"]) {
+            $('#time').val(localStorage["time"]);
+        }
+        if (localStorage["class"]) {
+            $('#class').val(localStorage["class"]);
+        }
+    }
+    init();
+});
+
+$('.stored').keyup(function () {
+    localStorage[$(this).attr('name')] = $(this).val();
+});
+
+$('#localStorageTest').submit(function() {
+    localStorage.clear();
+});
+</script>
+
+
+
+
+</div><!--/content-->
+
+</div><!--/cetvrtak-->
+
+
+
+
+
+
+</body>
+</html>

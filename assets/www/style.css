@@ -1,0 +1,230 @@
+/* CSS Document */
+/* 
+body{
+	background:url(img/bg.gif);
+	}
+*/	
+h1{
+	color:#FFF;
+	}
+	
+	
+.ui-page {
+    background:url(img/bg.gif) repeat-x #00a2ff;
+ }	
+
+
+a.ui-link{
+	color:#FFF;
+	}
+
+#wrapper{
+	width:250px;
+	height:auto;
+	/*border:1px red solid;*/
+	margin:auto;
+	margin-top:10px;
+	}
+
+a{
+	text-decoration:none;
+	font-family:Trebuchet MS;
+	color:#FFF;
+	font-weight:100;
+	}
+
+p{
+	text-decoration:none;
+	font-family:Trebuchet MS;
+	color:#FFF;
+	font-weight:100;
+	margin-top:1px;
+	text-align:center;
+	font-size:15px;
+	}
+
+	
+#logo{
+	margin-bottom:20px;
+	}	
+	
+/*-----------------ROW1------------------*/	
+#row1{
+	width:250px;
+	height:109px;
+	/*border:1px green solid;*/
+	margin-top:10px;
+	}
+
+.icon1{
+	/*border:1px red solid;*/
+	width:120px;
+	float:left;
+	margin-top:8px;
+	padding-top:3px;
+	}
+
+.icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover, .icon5:hover, .icon6:hover{
+	background:#0179c0;
+}	
+	
+.icon_picture1{
+	/*border:1px red solid;*/
+	margin-left:27px;
+	}
+
+
+
+.icon2{
+	/*border:1px red solid;*/
+	width:120px;
+	float:right;
+	padding-top:3px;
+	}
+
+.icon_picture2{
+	/*border:1px red solid;*/
+	margin-left:36px;
+	}
+
+/*-----------------ROW2------------------*/	
+#row2{
+	width:250px;
+	height:100px;
+	/*border:1px green solid;*/
+	margin-top:25px;
+	}
+
+.icon3{
+	/*border:1px red solid;*/
+	width:120px;
+	float:left;
+	padding-top:3px;
+	}
+
+.icon_picture3{
+	/*border:1px red solid;*/
+	margin-left:27px;
+	}
+
+.icon4{
+	/*border:1px red solid;*/
+	width:120px;
+	float:right;
+	padding-top:3px;
+	}
+
+.icon_picture4{
+	/*border:1px red solid;*/
+	margin-left:22px;
+	}
+	
+/*-----------------ROW3------------------*/		
+#row3{
+	width:250px;
+	height:100px;
+	/*border:1px green solid;*/
+	margin-top:30px;
+	}
+
+.icon5{
+	/*border:1px red solid;*/
+	width:120px;
+	margin:auto;
+	margin-top:12px;
+	float: right;
+	padding-top:5px;
+	}
+
+.icon_picture5{
+	/*border:1px red solid;*/
+	margin-left:22px;
+	}
+
+.icon6{
+	/*border:1px red solid;*/
+	width:120px;
+	margin:auto;
+	margin-top:12px;
+	float: left;
+	padding-top:5px;
+	}
+
+.icon_picture6{
+	/*border:1px red solid;*/
+	margin-top: -7px;
+	margin-left:25px;
+	}
+	
+	
+/*-----------------ROW4-ADS------------------*/		
+#row4{
+	width:250px;
+	height:25px;
+	border:1px green solid;
+	margin-top:6px;
+	}
+	
+/*------------------------------------ISPITNI-ROKOVI------------------------------------------------*/		
+#background1{
+	background:#0186d4;
+	}	
+
+#background2{
+	background:#f75700;
+	}	
+
+#background3{
+	background:#00f763;
+	}	
+
+#background4{
+	background:#f700dd;
+	}	
+
+#background5{
+	background:#f7e300;
+	}	
+
+#background6{
+	background:#00e8f7;
+	}	
+
+#background7{
+	background:#f7004c;
+	}	
+
+#background8{
+	background:#8b00f7;
+	}	
+
+
+
+textarea.ui-input-text {
+    height : 200px;
+
+    -webkit-transition : height 200ms linear;
+       -moz-transition : height 200ms linear;
+         -o-transition : height 200ms linear;
+            transition : height 200ms linear;
+}	
+
+
+
+*{
+
+text-shadow: none !important;
+
+-webkit-box-shadow: none !important;
+
+-webkit-border-radius:0!important;
+
+-webkit-border-top-left-radius:0!important;
+
+-webkit-border-bottom-left-radius:0!important;
+
+-webkit-border-bottom-right-radius:0!important;
+
+-webkit-border-top-right-radius:0!important;
+
+}

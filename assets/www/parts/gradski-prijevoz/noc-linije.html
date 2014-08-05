@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<title>StudentLife Rijeka</title>
+	
+      
+      <!-- JQUERY -->
+    <link rel="stylesheet" href="../../jquery.mobile/jquery.mobile-1.3.1.min.css" />
+    <script src="../../jquery.mobile/jquery-1.9.1.min.js"></script>
+    <script src="../../jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+
+	<link rel="stylesheet" href="../../docsdemos-style-override.css" />
+	<link rel="stylesheet" href="../../style.css" />
+	
+    
+	<!-- System scripts -->
+	<!-- Uncomment following line to access PhoneGap APIs (not necessary to use PhoneGap to package web app) -->
+	  <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+	  <script type="text/javascript" charset="utf-8">
+      
+  		 var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+            navigator.splashscreen.hide();
+            /*
+            var ref = window.open('http://apache.org', '_blank', 'location=yes');
+            ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+            ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+            ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+            ref.addEventListener('exit', function(event) { alert(event.type); });
+            */
+        };
+
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        
+            
+        }   
+  
+        </script>  
+        <!-- Custom scripts/style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+	   
+
+</head> 
+
+<body onload="init();"> 
+
+  <!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Vozni red</h1>
+  	<a href="izbor.html" rel="external" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+</div><!--/header-->   
+
+
+<div data-role="content">
+            
+    <ul data-role="listview">
+        <li><a href="101.jpg" target="_blank">101 <i>TRSAT - CENTAR - MARČ.DRAGA</i></a></li>
+        <li><a href="102.jpg" target="_blank">102 <i>VEŽICA - CENTAR - SRDOČI</i></a></li>
+        <li><a href="103.jpg" target="_blank">103 <i>JELAČIĆEV TRG - DRENOVA</i></a></li>
+    </ul><!--/listview-->     
+           
+            
+</div><!--/content-->
+
+
+
+</body>
+</html>

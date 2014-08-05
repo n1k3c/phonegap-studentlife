@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudentLife Rijeka</title>
+	
+      
+      <!-- JQUERY -->
+     <link rel="stylesheet" href="../../jquery.mobile/jquery.mobile-1.3.1.min.css" />
+    <script src="../../jquery.mobile/jquery-1.9.1.min.js"></script>
+    <script src="../../jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+    
+	<link rel="stylesheet" href="../../docsdemos-style-override.css" />
+	<link rel="stylesheet" href="../../parts.css" />
+	
+
+    
+	<!-- System scripts -->
+
+	<!-- Uncomment following line to access PhoneGap APIs (not necessary to use PhoneGap to package web app) -->
+	  <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+	  <script type="text/javascript" charset="utf-8">
+      
+  		 var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+            navigator.splashscreen.hide();
+            
+        };
+
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        
+            
+        }   
+  
+        </script>  
+        <!-- Custom scripts/style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+
+</head> 
+<body onload="init();">
+<div data-role="page" id="domovi">
+
+  <!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Domovi</h1>
+  	<a href="izbor.html" rel="external" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+</div><!--/header-->   
+
+
+<div data-role="content">
+            
+   <ul data-role="listview">
+        <li><a href="#gorankovacic.html" data-transition="none">Studentsko naselje “Ivan Goran Kovačić”</a></li>
+   </ul><!--/listview-->  
+           
+            
+</div><!--/content-->
+
+</div><!--/page-->
+
+
+
+
+<!--------- GORAN KOVACIC    ---- PAGE 1 -------------------------------------------------------------------->
+<div data-role="page" id="gorankovacic.html" >
+
+<!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>“Ivan Goran Kovačić”</h1>
+  	<a href="#domovi" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+    
+</div><!--/header-->
+<div data-role="content"> 
+  <br>Adresa: <i>Franje Čandeka 4</i>
+  <p>U okviru postojećih smještajnih kapaciteta u Studentskom naselju «Ivan Goran Kovačić» u Čandekovoj ulici br. 4, studentima je na raspolaganju ukupno 648 kreveta raspoređenih u pet smještajnih objekata, odnosno u 61 jednokrevetnu sobu i 294 dvokrevetnih soba, a za studente iz međunarodne suradnje rezervirano je 10 dodatnih kreveta. Za gostujuće profesore iz međunarodne suradnje kao i one iz Hrvatske, a koji su uključeni u znanstveni rad na fakultetima odnosno u razne znanstvene projekte, osigurano je 8 apartmana u petom objektu.</p>
+<br><a href="http://www.scri.uniri.hr/smjestaj_dom.html" target="_blank">Više informacija</a>
+<br>
+<br><a href="https://maps.google.hr/maps?q=Franje+%C4%8Candeka+4,+Rijeka&hl=hr&ie=UTF8&sll=45.329935,14.433968&sspn=0.008191,0.021136&t=h&hnear=Ulica+Franje+%C4%8Candeka+4,+51000,+Rijeka,+Primorsko-goranska+%C5%BEupanija&z=16" target="_blank">Mapa</a>
+
+  </div><!--/content-->
+</div><!--/page-->
+
+
+</body>
+</html>

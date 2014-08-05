@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudentLife Rijeka</title>
+	
+      
+      <!-- JQUERY -->
+     <link rel="stylesheet" href="../../jquery.mobile/jquery.mobile-1.3.1.min.css" />
+    <script src="../../jquery.mobile/jquery-1.9.1.min.js"></script>
+    <script src="../../jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+    
+	<link rel="stylesheet" href="../../docsdemos-style-override.css" />
+	<link rel="stylesheet" href="../../style.css" />
+	
+
+    
+	<!-- System scripts -->
+
+	<!-- Uncomment following line to access PhoneGap APIs (not necessary to use PhoneGap to package web app) -->
+	  <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+	  <script type="text/javascript" charset="utf-8">
+      
+  		 var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+            navigator.splashscreen.hide();
+            
+        };
+
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        
+            
+        }   
+  
+        </script>  
+        <!-- Custom scripts/style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+	
+</head> 
+<body onload="init();"> 
+<div data-role="page" id="ispitni_rokovi">
+
+  <!-- HEADER -->
+<div data-role="header" data-theme="b" data-position="fixed">
+  <h1>Ispitni rokovi</h1>
+  	<a href="izbor.html" rel="external" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+</div><!--/header-->   
+
+<!-- PREDMET 1 ---------------------------------->
+	
+<div id="background1">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta1" id="imepredmeta1" value="" class="stored" placeholder="Ime predmeta" />   
+		<input type="text" name="vrsta1" id="vrsta1" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok1" id="rok1" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta1"]) {
+						$('#imepredmeta1').val(localStorage["imepredmeta1"]);
+					}
+					if (localStorage["vrsta1"]) {
+						$('#vrsta1').val(localStorage["vrsta1"]);
+					}
+					if (localStorage["rok1"]) {
+						$('#rok1').val(localStorage["rok1"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background1--> 
+
+
+<!-- PREDMET 2 ---------------------------------->
+	
+<div id="background2">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta2" id="imepredmeta2" value="" class="stored" placeholder="Ime predmeta 2" />   
+		<input type="text" name="vrsta2" id="vrsta2" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok2" id="rok2" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta2"]) {
+						$('#imepredmeta2').val(localStorage["imepredmeta2"]);
+					}
+					if (localStorage["vrsta2"]) {
+						$('#vrsta2').val(localStorage["vrsta2"]);
+					}
+					if (localStorage["rok2"]) {
+						$('#rok2').val(localStorage["rok2"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background2--> 
+
+
+<!-- PREDMET 3 ---------------------------------->
+	
+<div id="background3">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta3" id="imepredmeta3" value="" class="stored" placeholder="Ime predmeta 3" />   
+		<input type="text" name="vrsta3" id="vrsta3" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok3" id="rok3" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta3"]) {
+						$('#imepredmeta3').val(localStorage["imepredmeta3"]);
+					}
+					if (localStorage["vrsta3"]) {
+						$('#vrsta3').val(localStorage["vrsta3"]);
+					}
+					if (localStorage["rok3"]) {
+						$('#rok3').val(localStorage["rok3"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background3--> 
+
+
+<!-- PREDMET 4 ---------------------------------->
+	
+<div id="background4">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta4" id="imepredmeta4" value="" class="stored" placeholder="Ime predmeta 4" />   
+		<input type="text" name="vrsta4" id="vrsta4" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok4" id="rok4" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta4"]) {
+						$('#imepredmeta4').val(localStorage["imepredmeta4"]);
+					}
+					if (localStorage["vrsta4"]) {
+						$('#vrsta4').val(localStorage["vrsta4"]);
+					}
+					if (localStorage["rok4"]) {
+						$('#rok4').val(localStorage["rok4"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background4--> 
+
+
+<!-- PREDMET 5 ---------------------------------->
+	
+<div id="background5">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta5" id="imepredmeta5" value="" class="stored" placeholder="Ime predmeta 5" />   
+		<input type="text" name="vrsta5" id="vrsta5" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok5" id="rok5" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta5"]) {
+						$('#imepredmeta5').val(localStorage["imepredmeta5"]);
+					}
+					if (localStorage["vrsta5"]) {
+						$('#vrsta5').val(localStorage["vrsta5"]);
+					}
+					if (localStorage["rok5"]) {
+						$('#rok5').val(localStorage["rok5"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background5-->
+
+<!-- PREDMET 6 ---------------------------------->
+	
+<div id="background6">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta6" id="imepredmeta6" value="" class="stored" placeholder="Ime predmeta 6" />   
+		<input type="text" name="vrsta6" id="vrsta6" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok6" id="rok6" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta6"]) {
+						$('#imepredmeta6').val(localStorage["imepredmeta6"]);
+					}
+					if (localStorage["vrsta6"]) {
+						$('#vrsta6').val(localStorage["vrsta6"]);
+					}
+					if (localStorage["rok6"]) {
+						$('#rok6').val(localStorage["rok6"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background6-->
+
+
+<!-- PREDMET 7 ---------------------------------->
+	
+<div id="background7">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta7" id="imepredmeta7" value="" class="stored" placeholder="Ime predmeta 7" />   
+		<input type="text" name="vrsta7" id="vrsta7" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok7" id="rok7" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta7"]) {
+						$('#imepredmeta7').val(localStorage["imepredmeta7"]);
+					}
+					if (localStorage["vrsta7"]) {
+						$('#vrsta7').val(localStorage["vrsta7"]);
+					}
+					if (localStorage["rok7"]) {
+						$('#rok7').val(localStorage["rok7"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background7-->
+
+<!-- PREDMET 8 ---------------------------------->
+	
+<div id="background8">
+	<div data-role="content"> 
+	   <form name="rokovi" id="" method="post" action="">	
+		<input type="text" name="imepredmeta8" id="imepredmeta8" value="" class="stored" placeholder="Ime predmeta 8" />   
+		<input type="text" name="vrsta8" id="vrsta8" value="" class="stored" placeholder="Kolokvij / zavrsni / popravni" /> 
+		<input type="text" name="rok8" id="rok8" value="" class="stored" placeholder="Datum provjere" /> 	
+		<input type="submit" id='add' class="demo-button" value="Aj spremi!" onclick='changeName()'/>		
+       </form> 
+	</div><!--/content-->
+  
+	<script type="text/javascript">
+			$(document).ready(function () {
+				function init() {
+					if (localStorage["imepredmeta8"]) {
+						$('#imepredmeta8').val(localStorage["imepredmeta8"]);
+					}
+					if (localStorage["vrsta8"]) {
+						$('#vrsta8').val(localStorage["vrsta8"]);
+					}
+					if (localStorage["rok8"]) {
+						$('#rok8').val(localStorage["rok8"]);
+					}
+					
+				}
+				init();
+			});
+
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+
+			$('#localStorageTest').submit(function() {
+				localStorage.clear();
+			});
+	</script>
+</div><!--/background7-->
+
+
+
+</div><!--/page-->
+</body>
+</html>

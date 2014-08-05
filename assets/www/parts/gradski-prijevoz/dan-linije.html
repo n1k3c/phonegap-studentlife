@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudentLife Rijeka</title>
+	
+      
+      <!-- JQUERY -->
+    <link rel="stylesheet" href="../../jquery.mobile/jquery.mobile-1.3.1.min.css" />
+    <script src="../../jquery.mobile/jquery-1.9.1.min.js"></script>
+    <script src="../../jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+
+	<link rel="stylesheet" href="../../docsdemos-style-override.css" />
+	<link rel="stylesheet" href="../../style.css" />
+	
+    
+	<!-- System scripts -->
+
+	<!-- Uncomment following line to access PhoneGap APIs (not necessary to use PhoneGap to package web app) -->
+	  <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+	  <script type="text/javascript" charset="utf-8">
+      
+  		 var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+            navigator.splashscreen.hide();
+            /*
+            var ref = window.open('http://apache.org', '_blank', 'location=yes');
+            ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+            ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+            ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+            ref.addEventListener('exit', function(event) { alert(event.type); });
+            */
+        };
+
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        
+            
+        }   
+  
+        </script>  
+        <!-- Custom scripts/style -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+	   
+<script src="phonegap.js"></script>
+</head> 
+
+<body onload="init();"> 
+
+  <!-- HEADER -->
+<div data-role="header" data-theme="b">
+  <h1>Vozni red</h1>
+  	<a href="izbor.html" rel="external" data-role="button" data-icon="back" data-transition="none">Natrag</a>
+</div><!--/header-->   
+
+
+<div data-role="content">
+            
+ <ul data-role="listview">
+       <li><a href="1.jpg" target="_blank">1A <i>PEĆINE PLUMBUM - BIVIO</i></a></li>
+        <li><a href="1a.jpg" target="_blank">1A <i>A.K MIOŠIĆA - MARČ.DRAGA</i></a></li>
+        <li><a href="1b.jpg" target="_blank">1B <i>TOWER - STRMICA</i></a></li>
+        <li><a href="2.jpg"  target="_blank">2 <i>TRSAT - SRDOČI</i></a></li>
+        <li><a href="2a.jpg"  target="_blank">2A <i>A.K MIOŠIĆA - I.ZAVIDIĆA</i></a></li>
+        <li><a href="3.jpg"  target="_blank">3 <i>ŠET. A.K MIOŠIĆA - GRBCI</i></a></li>
+        <li><a href="3a.jpg"  target="_blank">3A <i>TURKOVO - BEZJAKI</i></a></li>
+        <li><a href="4.jpg"  target="_blank">4 <i>FIUMARA - BRAŠĆINE </i></a></li>
+        <li><a href="4a.jpg"  target="_blank">4A <i>BRAŠĆINE - PULAC</i></a></li>
+        <li><a href="5.jpg"  target="_blank">5 <i>JELAČIĆEV TRG - DRENOVA</i></a></li>
+        <li><a href="5a.jpg"  target="_blank">5A <i>ŽELJ.KOL. - DREŽNIČKA - TIBLJAŠI</i></a></li>
+        <li><a href="5b.jpg"  target="_blank">5B <i>DRENOVA - PETRCI</i></a></li>
+        <li><a href="6.jpg"  target="_blank">6 <i>PODVEŽICA - NOVO NASELJE</i></a></li>
+        <li><a href="7.jpg"  target="_blank">7 <i>GORNJA VEŽICA - PEHLIN</i></a></li>
+        <li><a href="7a.jpg"  target="_blank">7A <i>SVETI KRIŽ - HOSTI</i></a></li>
+        <li><a href="8.jpg"  target="_blank">8 <i>TRSAT - KAMPUS (TORPEDO)</i></a></li>
+        <li><a href="8a.jpg"  target="_blank">8A <i>JELAČIĆEV TRG - KAMPUS</i></a></li>
+        <li><a href="9.jpg"  target="_blank">9 <i>M.KONTUŠAA - SV.KUZAM</i></a></li>
+        <li><a href="13.jpg"  target="_blank">13 <i>DELTA - PAÅ AC - GROHOVO</i></a></li>
+        <li><a href="100.jpg"  target="_blank">100 <i>A.K MIOČIĆA - CENTAR - CAMBIERIEVA</i></a></li>
+
+
+    </ul><!--/listview-->     
+           
+            
+</div><!--/content-->
+
+
+
+</body>
+</html>
